@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int findMagicIndex(vector<int>& nums) {
+        int res = -1;
+        for(int i=0;i<nums.size();){
+            if(nums[i]==i){
+                return i;
+            }
+            
+        }
+        return res;
+    }
+};
+优化：

@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+int huiwen(char *str)
+{
+    //char ch[100];
+    int len=strlen(str);  
+    int i,j,temp;
+    for(i=0,j=len-1;i<=j;i++,j--)  
+    {
+        if(str[i]==str[j])  
+            temp=1;
+        else                 
+        {
+            temp=0;
+            break;
+        }
+    }
+    return temp;
+}
+main()
+{
+    char ch[100];
+    printf("请输入一组字符串：");
+    //scanf("%s",&ch);  
+    gets(ch);           
+    if(huiwen(ch))
+        printf("这组字符串 %s 是回文字符串！\n",ch);
+    else
+        printf("这组字符串 %s 不是回文字符串！\n",ch);
+}
+return 0;
+}
